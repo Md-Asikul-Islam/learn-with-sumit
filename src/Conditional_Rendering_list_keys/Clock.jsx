@@ -86,6 +86,7 @@
 // টারনারি অপারেটর এর মাধ্যমে রেনডারিং করার নিয়ম। 
 
 
+
 import React from 'react';
 import Button from './Button';
 
@@ -124,7 +125,7 @@ class Clock extends React.Component {
                     <span className="text">{date.toLocaleTimeString(locale)}</span>
                 </h1>
                 
-                { locale === "bn-BD" ?  <Button change={this.handleClick} locale = "en-US" >Click Here</Button> :  <Button change={this.handleClick} locale = "bn-BD" >Click Here</Button>}
+                { locale === "bn-BD" ?  <Button change={this.handleClick} locale = "en-US" /> :  <Button change={this.handleClick} locale = "bn-BD"  />}
                
             </div>
         );
@@ -132,4 +133,10 @@ class Clock extends React.Component {
 }
 
 export default Clock;
+
+
+// ******
+// // ১। টারনারি অপারেটর রিটার্নের ভিতরে লিখতে হয় , কারলি ব্রাসেস এর মধ্যে ডায়নামিকালি ।
+
+// // ২। jsx Element প্রথম বন্ধনীর মধ্যে রাখতে হবে ।
 
