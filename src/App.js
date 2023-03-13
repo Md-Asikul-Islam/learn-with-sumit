@@ -1,10 +1,12 @@
 import './App.css';
-import Clock from './Conditional_Rendering_list_keys/Clock';
+import Clocklist from './Conditional_Rendering_list_keys/ClockList';
 
 function App() {
+  const quantites = [1, 2, 3] ;
+
   return (
     <div className="App">
-      <Clock/>
+      <Clocklist quantities={quantites}/>
     </div>
   );
 }
